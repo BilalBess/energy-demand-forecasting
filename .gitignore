@@ -1,0 +1,4 @@
+data/conso_raw.csv
+__pycache__/
+.venv/
+.DS_Store

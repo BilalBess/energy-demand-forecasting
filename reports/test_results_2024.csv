@@ -1,0 +1,7 @@
+,MAE_MW,RMSE_MW,MAPE_%
+Naive: same hour last week,3248.0,4859.0,6.09
+Naive: same hour yesterday,2533.0,3665.0,5.11
+RTE official day-ahead forecast,1429.0,1766.0,2.86
+Ridge (linear),1486.0,2037.0,3.04
+Gradient boosting (mine),972.0,1416.0,1.88
+"Gradient boosting, no temperature",1282.0,1864.0,2.45
