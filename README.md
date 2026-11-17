@@ -1,5 +1,7 @@
 # Day-Ahead Forecast of French Electricity Consumption
 
+[![CI](https://github.com/BilalBess/energy-demand-forecasting/actions/workflows/ci.yml/badge.svg)](https://github.com/BilalBess/energy-demand-forecasting/actions/workflows/ci.yml)
+
 Time series project: forecast the **hourly electricity consumption of France** for the next day, compare several models with a strict time-based evaluation, and benchmark against the official forecast published by RTE (the grid operator).
 
 ## Problem
@@ -60,6 +62,13 @@ The honest conclusion is: with simple features and a gradient boosting model, on
 pip install -r requirements.txt
 python src/forecast.py     # downloads data (about 10 MB), trains, writes reports/
 ```
+
+## Tests
+```bash
+pip install pytest
+pytest -q
+```
+The tests cover the lag features (no information from the future), holiday flags and the error metrics. They run on every push with GitHub Actions (`.github/workflows/ci.yml`: lint with ruff, then pytest).
 
 ## Skills shown
 Time series feature engineering without leakage, time-based validation, baselines and benchmarks, gradient boosting, error analysis, being careful with claims.
